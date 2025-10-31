@@ -173,10 +173,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - WOW.js for animations
 - All contributors and supporters
 
-## 📧 Contact
-
-For any queries or support, please contact: your.email@example.com
-
 ## 🐛 Known Issues
 
 None at the moment. Please report any bugs in the Issues section.
