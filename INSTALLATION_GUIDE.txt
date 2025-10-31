@@ -1,0 +1,181 @@
+================================================================================
+HOSPITAL MANAGEMENT SYSTEM - INSTALLATION & SETUP GUIDE
+================================================================================
+
+SYSTEM REQUIREMENTS:
+-------------------
+- XAMPP (or any other PHP development environment)
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Web Browser (Chrome, Firefox, Edge, Safari)
+
+INSTALLATION STEPS:
+------------------
+
+1. DATABASE SETUP:
+   ----------------
+   a. Start XAMPP Control Panel
+   b. Start Apache and MySQL services
+   c. Open phpMyAdmin (http://localhost/phpmyadmin)
+   d. Click on "Import" tab
+   e. Choose file: database/hospital_db.sql
+   f. Click "Go" to import the database
+   
+   OR
+   
+   Run the SQL file directly:
+   - Open the database/hospital_db.sql file
+   - Copy all the content
+   - Paste it in phpMyAdmin SQL tab
+   - Click "Go"
+
+2. DATABASE CONFIGURATION:
+   -----------------------
+   The database configuration is already set up in:
+   config/database.php
+   
+   Default settings:
+   - Host: localhost
+   - User: root
+   - Password: (empty)
+   - Database: hospital_management
+   
+   If your MySQL has different credentials, update config/database.php
+
+3. ACCESS THE SYSTEM:
+   ------------------
+   Open your web browser and navigate to:
+   http://localhost/hospital/
+
+4. DEFAULT LOGIN CREDENTIALS:
+   --------------------------
+   
+   ADMIN:
+   Email: admin@hospital.com
+   Password: admin123
+   
+   DOCTOR (Sample):
+   Email: john.smith@hospital.com
+   Password: doctor123
+   
+   PATIENT (Sample):
+   Email: alice@example.com
+   Password: patient123
+
+FEATURES BY USER ROLE:
+---------------------
+
+PATIENT FEATURES:
+- Register new account
+- Login to patient dashboard
+- Book appointments with doctors
+- Browse available doctors by specialization
+- View appointment history
+- View and pay bills online
+- Update personal profile
+- View medical history
+
+DOCTOR FEATURES:
+- Login to doctor dashboard
+- View all appointments
+- Confirm/Complete appointments
+- Create patient bills
+- Prescribe medicines
+- View salary information
+- Update profile and availability status
+
+ADMIN FEATURES:
+- Complete system overview dashboard
+- Manage patients (view, delete)
+- Manage doctors (add, view, delete)
+- Set doctor salaries
+- Manage medicine inventory
+- View all appointments
+- View all bills and payments
+- Process doctor salary payments
+- Financial reports and statistics
+
+SYSTEM STRUCTURE:
+----------------
+
+/hospital
+  /admin              - Admin dashboard and management
+  /config             - Configuration files
+  /database           - SQL database file
+  /doctor             - Doctor dashboard and features
+  /includes           - Reusable components (header, footer, navbar, functions)
+  /patient            - Patient dashboard and features
+  /css                - Stylesheets
+  /js                 - JavaScript files
+  /lib                - Third-party libraries
+  index.php           - Homepage
+  login.php           - Login page
+  register.php        - Patient registration
+  logout.php          - Logout handler
+
+DATABASE TABLES:
+---------------
+- users               - Main user authentication
+- patients            - Patient specific information
+- doctors             - Doctor specific information
+- appointments        - Appointment bookings
+- medicines           - Medicine inventory
+- prescriptions       - Doctor prescriptions
+- bills               - Patient bills
+- payments            - Payment records
+- salaries            - Doctor salary records
+
+SECURITY FEATURES:
+-----------------
+- Password hashing using PHP password_hash()
+- SQL injection prevention using prepared statements
+- Session management
+- Role-based access control
+- Input validation and sanitization
+- XSS protection using htmlspecialchars()
+
+TROUBLESHOOTING:
+---------------
+
+Issue: Database connection error
+Solution: Check if MySQL is running in XAMPP and verify database credentials
+
+Issue: Page not found (404)
+Solution: Ensure you're accessing http://localhost/hospital/ (not just localhost)
+
+Issue: Cannot login
+Solution: Make sure you've imported the database with sample data
+
+Issue: Blank page or white screen
+Solution: Enable error reporting - Add this to top of index.php:
+          error_reporting(E_ALL);
+          ini_set('display_errors', 1);
+
+CUSTOMIZATION:
+-------------
+
+To change site name:
+- Edit config/config.php
+- Update SITE_NAME constant
+
+To add more doctors:
+- Login as admin
+- Go to "Manage Doctors"
+- Click "Add New Doctor"
+
+To change default passwords:
+- Login with default credentials
+- Go to respective profile page
+- Update password (if password change feature is added)
+
+SUPPORT & DOCUMENTATION:
+-----------------------
+For additional help or questions:
+- Check the code comments in PHP files
+- Review the database schema in database/hospital_db.sql
+- All functions are documented in includes/functions.php
+
+================================================================================
+SYSTEM DEVELOPED: 2025
+VERSION: 1.0
+================================================================================

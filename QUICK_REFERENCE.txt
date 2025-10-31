@@ -1,0 +1,228 @@
+================================================================================
+HOSPITAL MANAGEMENT SYSTEM - QUICK REFERENCE
+================================================================================
+
+DEFAULT LOGIN CREDENTIALS:
+=========================
+
+ADMIN ACCESS:
+Email: admin@hospital.com
+Password: admin123
+Dashboard: http://localhost/hospital/admin/dashboard.php
+
+DOCTOR ACCESS:
+Email: john.smith@hospital.com (or sarah.johnson@hospital.com)
+Password: doctor123
+Dashboard: http://localhost/hospital/doctor/dashboard.php
+
+PATIENT ACCESS:
+Email: alice@example.com (or bob@example.com)
+Password: patient123
+Dashboard: http://localhost/hospital/patient/dashboard.php
+
+NEW PATIENT REGISTRATION:
+Register at: http://localhost/hospital/register.php
+
+================================================================================
+
+KEY SYSTEM PAGES:
+================
+
+PUBLIC PAGES:
+- Homepage: /index.php
+- Login: /login.php
+- Patient Registration: /register.php
+- Logout: /logout.php
+
+PATIENT PAGES:
+- Dashboard: /patient/dashboard.php
+- Book Appointment: /patient/book-appointment.php
+- My Appointments: /patient/appointments.php
+- View Doctors: /patient/doctors.php
+- My Bills: /patient/bills.php
+- My Profile: /patient/profile.php
+
+DOCTOR PAGES:
+- Dashboard: /doctor/dashboard.php
+- My Appointments: /doctor/appointments.php
+- Create Bill: /doctor/create-bill.php
+- Prescribe Medicine: /doctor/prescribe.php
+- My Salary: /doctor/salary.php
+- My Profile: /doctor/profile.php
+
+ADMIN PAGES:
+- Dashboard: /admin/dashboard.php
+- Manage Patients: /admin/patients.php
+- Manage Doctors: /admin/doctors.php
+- Appointments: /admin/appointments.php
+- Manage Medicines: /admin/medicines.php
+- Bills & Payments: /admin/bills.php
+- Doctor Salaries: /admin/salaries.php
+
+================================================================================
+
+COMMON WORKFLOWS:
+================
+
+1. PATIENT BOOKING APPOINTMENT:
+   - Login as patient
+   - Go to "Book Appointment"
+   - Select specialization (optional filter)
+   - Choose doctor
+   - Select date and time
+   - Enter symptoms
+   - Submit booking
+
+2. DOCTOR MANAGING APPOINTMENTS:
+   - Login as doctor
+   - View pending appointments on dashboard
+   - Go to "My Appointments"
+   - Confirm pending appointments
+   - Complete confirmed appointments
+   - Create bills for completed appointments
+   - Prescribe medicines if needed
+
+3. ADMIN ADDING NEW DOCTOR:
+   - Login as admin
+   - Go to "Manage Doctors"
+   - Click "Add New Doctor"
+   - Fill in all required information
+   - Set salary amount
+   - Submit
+
+4. ADMIN MANAGING MEDICINE INVENTORY:
+   - Login as admin
+   - Go to "Manage Medicines"
+   - Click "Add New Medicine" to add new
+   - Click "Stock" button to update quantity
+   - Low stock items highlighted in yellow
+
+5. PATIENT PAYING BILL:
+   - Login as patient
+   - Go to "My Bills"
+   - Click "Pay Now" on unpaid bill
+   - Select payment method
+   - Enter amount
+   - Confirm payment
+
+6. ADMIN PAYING DOCTOR SALARY:
+   - Login as admin
+   - Go to "Doctor Salaries"
+   - Click "Pay Salary"
+   - Select doctor
+   - Amount auto-fills with monthly salary
+   - Select payment month
+   - Add notes (optional)
+   - Process payment
+
+================================================================================
+
+IMPORTANT NOTES:
+===============
+
+SECURITY:
+- Never share admin credentials
+- Change default passwords in production
+- All passwords are hashed in database
+- Sessions expire on browser close
+
+DATABASE:
+- Database name: hospital_management
+- All timestamps in UTC
+- Cascading deletes enabled for related records
+
+APPOINTMENT STATUSES:
+- pending: Newly booked, awaiting confirmation
+- confirmed: Doctor confirmed the appointment
+- completed: Appointment finished
+- cancelled: Patient cancelled
+
+BILL STATUSES:
+- unpaid: No payment received
+- partially_paid: Some payment received
+- paid: Full payment received
+
+DOCTOR AVAILABILITY:
+- available: Accepting appointments
+- unavailable: Not accepting appointments
+- on_leave: Temporarily unavailable
+
+================================================================================
+
+SAMPLE DATA INCLUDED:
+====================
+
+DOCTORS (4):
+1. Dr. John Smith - Cardiology
+2. Dr. Sarah Johnson - Pediatrics
+3. Dr. Michael Brown - Orthopedics
+4. Dr. Emily Davis - Dermatology
+
+PATIENTS (2):
+1. Alice Williams
+2. Bob Miller
+
+MEDICINES (8):
+Including Paracetamol, Amoxicillin, Ibuprofen, etc.
+
+APPOINTMENTS (2):
+Sample appointments already booked
+
+================================================================================
+
+FILE LOCATIONS:
+==============
+
+Configuration:
+- Database Config: /config/database.php
+- App Config: /config/config.php
+
+Reusable Components:
+- Functions: /includes/functions.php
+- Header: /includes/header.php
+- Footer: /includes/footer.php
+- Navbar: /includes/navbar.php
+
+Sidebars:
+- Patient: /patient/sidebar.php
+- Doctor: /doctor/sidebar.php
+- Admin: /admin/sidebar.php
+
+Database:
+- SQL File: /database/hospital_db.sql
+
+Styles:
+- Custom CSS: /css/style.css
+
+Scripts:
+- Custom JS: /js/main.js
+
+================================================================================
+
+QUICK TIPS:
+==========
+
+1. To test the complete flow:
+   - Register as new patient
+   - Book appointment with doctor
+   - Login as doctor and confirm appointment
+   - Complete appointment and create bill
+   - Login as patient and pay bill
+
+2. All email addresses must be unique
+
+3. Doctors can only create bills for completed appointments
+
+4. Patients can only book with available doctors
+
+5. Admin can view all system data but cannot book appointments
+
+6. Flash messages auto-hide after 5 seconds
+
+7. Tables are responsive and work on mobile devices
+
+8. All dates display in readable format (e.g., "Nov 01, 2025")
+
+9. All currency displays in USD format (e.g., "$100.00")
+
+================================================================================
