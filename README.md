@@ -1,6 +1,6 @@
 # Hospital Management System
 
-A comprehensive web-based Hospital Management System built with PHP and MySQL, featuring role-based access control for Patients, Doctors, and Administrators.
+A web-based Hospital Management System built with PHP and MySQL, featuring role-based access control for Patients, Doctors, and Administrators.
 
 ![PHP](https://img.shields.io/badge/PHP-7.4+-blue.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7+-orange.svg)
@@ -144,10 +144,6 @@ The system includes 9 main tables:
 - Role-based access control
 - Input validation and sanitization
 
-## 🎨 Screenshots
-
-*Add your screenshots here*
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -157,14 +153,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Authors
-
-- Your Name - Initial work
 
 ## 🙏 Acknowledgments
 
@@ -176,16 +164,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🐛 Known Issues
 
 None at the moment. Please report any bugs in the Issues section.
-
-## 🔮 Future Enhancements
-
-- [ ] Email notifications for appointments
-- [ ] SMS reminders
-- [ ] Video consultation feature
-- [ ] PDF report generation
-- [ ] Advanced analytics dashboard
-- [ ] Multi-language support
-- [ ] Mobile application
 
 ---
 
